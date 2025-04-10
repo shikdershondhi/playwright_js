@@ -6,4 +6,3 @@ node_modules/
 /playwright/.cache/
 /tests-examples
 auth.json
-.idea
