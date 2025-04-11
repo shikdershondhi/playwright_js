@@ -12,7 +12,7 @@ export class DealsPage extends BasePage {
     this.dealsMenuItem = page.getByRole('listitem').filter({ hasText: 'Deals Dashboard Repository' }).locator('span');
     this.repositorySubmenu = page.locator('li:nth-child(2) > .sidebar__submenu > li:nth-child(2) > .sidebar__submenu-link');
     this.draftRadio = page.getByRole('radio', { name: 'Draft 4' });
-    this.dealLink = page.getByRole('cell', { name: '682 ' }).getByRole('link');
+    this.dealLink = page.getByRole('cell', { name: '683' }).getByRole('link');
   }
 
   async navigateToDealsRepository() {
