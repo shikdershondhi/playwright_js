@@ -22,6 +22,19 @@ export default defineConfig({
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
+  // reporter: [
+  //   [
+  //     'playwright-mail-reporter',
+  //     {
+  //       host: "smtp.resend.com",
+  //       port: 465,
+  //       username: "resend",
+  //       password: `<YOUR_API_KEY>`,
+  //       from: "Elio <no-reply@elio.dev>",
+  //       to: "Elio <elio@struyfconsulting.be>"
+  //     }
+  //   ]
+  // ],
   reporter: 'html',
   /* Shared settings for all the projects below. See https://playwright.dev/docs/api/class-testoptions. */
   use: {
