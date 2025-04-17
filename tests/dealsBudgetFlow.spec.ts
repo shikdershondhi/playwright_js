@@ -23,7 +23,7 @@ test.describe('Deals to Budget Flow', () => {
 
     // Open deal in new tab
     const newTabPromise = page.waitForEvent('popup');
-    await dealsPage.dealLink_683.click();
+    await dealsPage.dealLink_682.click();
     const newTab = await newTabPromise;
 
     // Work with new tab
