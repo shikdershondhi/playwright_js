@@ -1,7 +1,6 @@
 import { test } from '@playwright/test';
 import { LoginPage } from '../pages/loginPage';
 import { DealsPage } from '../pages/dealsPage';
-import { BudgetPage } from '../pages/budgetPage';
 import * as testData from '../fixture/testdata.json';
 
 // Use test.describe to group related tests
@@ -17,9 +16,7 @@ test.describe('Deals to Budget Flow', () => {
 
     test('Navigate from Deals to Budget dashboard', async ({ page }) => {
         const dealsPage = new DealsPage(page);
-        const budgetPage = new BudgetPage(page);
-        
         await dealsPage.CreateNewDeal();
-
+        await dealsPage.page.waitForTimeout(5000); // Wait for 2 seconds to ensure the page is loaded
       });
 });

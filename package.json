@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "@playwright/mcp": "^0.0.13",
+    "playwright_js": "file:",
     "playwright-mail-reporter": "^0.0.8"
   }
 }

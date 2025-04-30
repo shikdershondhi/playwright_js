@@ -5,7 +5,7 @@ export class DealsPage extends BasePage {
   readonly dealsMenuItem: Locator;
   readonly repositorySubmenu: Locator;
   readonly draftRadio: Locator;
-  readonly dealLink_683: Locator;
+  readonly dealLink_682: Locator;
   readonly createDeal: Locator;
   readonly RoamingPartner: Locator;
   readonly selectOperators: Locator;
@@ -22,7 +22,7 @@ export class DealsPage extends BasePage {
     this.repositorySubmenu = page.locator('li:nth-child(2) > .sidebar__submenu > li:nth-child(2) > .sidebar__submenu-link');
     this.dealsrepositorySubmenu = page.locator('li:nth-child(2) > .sidebar__submenu > li:nth-child(3) > .sidebar__submenu-link');
     this.draftRadio = page.getByRole('radio', { name: 'Draft 4' });
-    this.dealLink_683 = page.getByRole('cell', { name: '683' }).getByRole('link');
+    this.dealLink_682 = page.getByRole('cell', { name: '682' }).getByRole('link');
     this.createDeal = page.getByRole('link', { name: 'Create deal' });
     this.RoamingPartner = page.getByRole('textbox', { name: 'Operators' });
     this.selectOperators = page.getByRole('option', { name: 'Operators' });
@@ -36,7 +36,7 @@ export class DealsPage extends BasePage {
   async navigateToDealsRepository() {
     await this.dealsMenuItem.click();
     await this.repositorySubmenu.click();
-    await this.draftRadio.check();
+    // await this.draftRadio.check();
   }
   async CreateNewDeal(){
     await this.dealsMenuItem.click();
@@ -46,7 +46,7 @@ export class DealsPage extends BasePage {
     await this.selectOperators.click();
     await this.Click_To_Select.click();
     await this.Select_RoamSmart.click();
-    await this.Digicel_Limited.click();
+    // await this.Digicel_Limited.click();
     await this.Confirm.click();
     await this.Save.click();
   }
