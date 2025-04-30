@@ -16,8 +16,7 @@ test.describe('Deals to Budget Flow', () => {
 
     test('Navigate from Deals to Budget dashboard', async ({ page }) => {
         const dealsPage = new DealsPage(page);
-        
         await dealsPage.CreateNewDeal();
-
+        await dealsPage.page.waitForTimeout(5000); // Wait for 2 seconds to ensure the page is loaded
       });
 });
