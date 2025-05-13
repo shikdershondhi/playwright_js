@@ -8,8 +8,8 @@ export class BudgetPage extends BasePage {
 
   constructor(page: Page) {
     super(page);
-    this.budgetMenuItem = page.getByRole('listitem').filter({ hasText: 'Budget Dashboard Repository' });
-    this.dashboardLink = this.budgetMenuItem.getByRole('link').first();
+    this.budgetMenuItem = page.getByRole('listitem').filter({ hasText: 'Budget' });
+    this.dashboardLink = page.getByRole('link', { name: 'Create budget' })
   }
 
   async navigateToBudgetDashboard() {
