@@ -45,6 +45,7 @@ export default defineConfig({
     trace: 'on-first-retry',
     video:'on',
     viewport: { width: 1920, height: 1080 },
+    // storageState: 'auth.json',	
   },
 
   /* Configure projects for major browsers */

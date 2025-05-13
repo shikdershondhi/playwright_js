@@ -8,12 +8,13 @@ export class BudgetPage extends BasePage {
 
   constructor(page: Page) {
     super(page);
-    this.budgetMenuItem = page.getByRole('listitem').filter({ hasText: 'Budget' });
-    this.dashboardLink = page.getByRole('link', { name: 'Create budget' })
+    // this.dashboardLink = page.locator("body > div.b-content > nav > ul:nth-child(1) > li:nth-child(3) > ul > li:nth-child(2)");
+    this.dashboardLink = page.getByRole('listitem').filter({ hasText: 'Budget Dashboard Repository' }).getByRole('link').first();
   }
 
   async navigateToBudgetDashboard() {
-    await this.dashboardLink.click({ force: true });
+    // await this.dashboardLink.click({ force: true });
+    // await this.budgetMenuItem.click({ force: true });
     await this.waitForLoadState();
   }
 }
