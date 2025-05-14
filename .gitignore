@@ -8,4 +8,4 @@ node_modules/
 auth.json
 downloads
 .idea
-fixtures\auth\*.json
+fixtures/auth/
