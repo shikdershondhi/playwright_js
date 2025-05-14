@@ -13,7 +13,7 @@ export class BudgetPage extends BasePage {
   }
 
   async navigateToBudgetDashboard() {
-    // await this.dashboardLink.click({ force: true });
+    await this.dashboardLink.click({ force: true });
     // await this.budgetMenuItem.click({ force: true });
     await this.waitForLoadState();
   }

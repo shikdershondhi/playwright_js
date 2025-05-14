@@ -1,0 +1,35 @@
+{
+  "cookies": [
+    {
+      "name": "csrftoken",
+      "value": "TNz0fbqyOspPF8XBPSOqZPix48m3pv86",
+      "domain": "nsdev24.neustring.com",
+      "path": "/",
+      "expires": 1778658752.566209,
+      "httpOnly": false,
+      "secure": false,
+      "sameSite": "Lax"
+    },
+    {
+      "name": "sessionid",
+      "value": "4289lwux0uu7pmx51xy46zgu2rf1sp9c",
+      "domain": "nsdev24.neustring.com",
+      "path": "/",
+      "expires": -1,
+      "httpOnly": true,
+      "secure": false,
+      "sameSite": "Lax"
+    }
+  ],
+  "origins": [
+    {
+      "origin": "https://nsdev24.neustring.com",
+      "localStorage": [
+        {
+          "name": "sessionExpiryTime",
+          "value": "1747212753733"
+        }
+      ]
+    }
+  ]
+}

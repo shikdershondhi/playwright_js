@@ -46,8 +46,8 @@ export class DealsPage extends BasePage {
     await this.selectOperators.click();
     await this.Click_To_Select.click();
     await this.Select_RoamSmart.click();
-    // await this.Digicel_Limited.click();
-    await this.Confirm.click();
+    await this.Confirm.click({force: true});
     await this.Save.click();
+    await this.page.waitForTimeout(2000);
   }
 }
