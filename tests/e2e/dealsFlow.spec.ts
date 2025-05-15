@@ -1,16 +1,12 @@
 import { test } from '@playwright/test';
-import { LoginPage } from '../pages/loginPage';
-import { DealsPage } from '../pages/dealsPage';
-import * as testData from '../fixture/testdata.json';
+import { DealsPage } from '../../pages/dealsPage';
+import * as testData from '../../fixtures/testdata.json';
 
 // Use test.describe to group related tests
 test.describe('Deals to Budget Flow', () => {
-  // This will run before all tests in this describe block
   test.beforeEach(async ({ page }) => {
-    const loginPage = new LoginPage(page);
-    await loginPage.page.goto(testData.login.url);
-    await loginPage.login(testData.login.username, testData.login.password);
-    await page.context().storageState({ path: 'auth.json' });
+    // Navigate to the home page before each test
+    await page.goto(testData.login.Homepage);
   });
 
   test('Navigate from Deals to Budget dashboard', async ({ page }) => {
@@ -27,6 +23,6 @@ test.describe('Deals to Budget Flow', () => {
     // Work with new tab
     await newTab.getByRole('button', { name: 'Save' }).click();
     await newTab.close();
-    await page.pause() // Wait for 5 seconds to ensure the page is loaded
+    await page.bringToFront();
   });
 });
