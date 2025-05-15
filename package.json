@@ -3,7 +3,22 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
-  "scripts": {},
+  "scripts": {
+    "test": "playwright test",
+    "test:headed": "playwright test --headed",
+    "test:ui": "playwright test --ui",
+    "test:chromium": "playwright test --project=chromium",
+    "test:report": "playwright show-report",
+    "test:setup": "playwright test tests/setup/auth.setup.ts",
+    "test:debug": "playwright test --debug",
+    "test:debug:ui": "playwright test --headed --debug --ui",
+    "test:debug:headed": "playwright test --headed --debug",
+    "test:allure": "playwright test --report=allure-playwright",
+    "test:allure:open": "allure open allure-results",
+    "test:mail": "playwright test --report=mail",
+    "test:mail:open": "playwright mail-reporter --report=mail",
+    "NPM:Install": "npm i"
+  },
   "keywords": [],
   "author": "",
   "license": "ISC",
@@ -13,8 +28,11 @@
     "@types/node": "^22.14.0"
   },
   "dependencies": {
-    "@playwright/mcp": "^0.0.13",
+    "@faker-js/faker": "^9.7.0",
+    "@playwright/mcp": "^0.0.24",
+    "allure-playwright": "^3.2.2",
     "playwright_js": "file:",
+    "playwright-lighthouse": "^4.0.0",
     "playwright-mail-reporter": "^0.0.8"
   }
 }

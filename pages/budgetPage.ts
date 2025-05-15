@@ -5,15 +5,14 @@ import { BasePage } from './basePage';
 export class BudgetPage extends BasePage {
   readonly budgetMenuItem: Locator;
   readonly dashboardLink: Locator;
-
   constructor(page: Page) {
     super(page);
-    this.budgetMenuItem = page.getByRole('listitem').filter({ hasText: 'Budget Dashboard Repository' });
-    this.dashboardLink = this.budgetMenuItem.getByRole('link').first();
+   
+    // If you want to navigate, call page.goto() in a method, not in the constructor.
   }
 
   async navigateToBudgetDashboard() {
-    await this.dashboardLink.click({ force: true });
+    await this.page.goto('https://nsdev24.neustring.com/budget/dashboard/');
     await this.waitForLoadState();
   }
 }

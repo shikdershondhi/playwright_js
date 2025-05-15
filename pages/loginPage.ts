@@ -1,6 +1,7 @@
 import { Page, Locator } from '@playwright/test';
 import { BasePage } from './basePage';
-import * as testData from '../fixture/testdata.json';
+// This class represents the login page of the application.
+// It contains methods to interact with the login form and perform login actions.
 
 export class LoginPage extends BasePage {
   readonly usernameInput: Locator;
