@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { AdminPage } from '../../pages/adminPage';
+import { AdminPage } from '../../pages/admin.page';
 import * as testData from '../../fixtures/testdata.json';
 // Use test.describe to group related tests
 test.describe('Admin Flow', () => {

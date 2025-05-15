@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { BudgetPage } from '../../pages/budgetPage';
+import { BudgetPage } from '../../pages/budget.page';
 import * as testData from '../../fixtures/testdata.json';
 // Use test.describe to group related tests
 test.describe('Budget Flow', () => {

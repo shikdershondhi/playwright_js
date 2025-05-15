@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { DealsPage } from '../../pages/dealsPage';
+import { DealsPage } from '../../pages/deals.page';
 import * as testData from '../../fixtures/testdata.json';
 
 // Use test.describe to group related tests

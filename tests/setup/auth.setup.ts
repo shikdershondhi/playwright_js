@@ -1,5 +1,5 @@
 import { test as setup } from '@playwright/test';
-import { LoginPage } from '../../pages/loginPage';
+import { LoginPage } from '../../pages/login.page';
 import * as testData from '../../fixtures/testdata.json';
 
 setup('authenticate', async ({ page }) => {

@@ -1,5 +1,5 @@
 import { Page, Locator } from '@playwright/test';
-import { BasePage } from './basePage';
+import { BasePage } from './base.page';
 // This class represents the login page of the application.
 // It contains methods to interact with the login form and perform login actions.
 
