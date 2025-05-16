@@ -3,8 +3,8 @@ import { BasePage } from './basePage';
 
 
 export class BudgetPage extends BasePage {
-  readonly budgetMenuItem: Locator;
-  readonly dashboardLink: Locator;
+  // readonly budgetMenuItem: Locator;
+  // readonly dashboardLink: Locator;
   constructor(page: Page) {
     super(page);
    

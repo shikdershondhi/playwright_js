@@ -1,5 +1,10 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
+import dotenv from 'dotenv';
+import path from 'path';
+
+const envFile = `.env.${process.env.NODE_ENV || 'dev'}`;
+dotenv.config({ path: path.resolve(__dirname, 'env', envFile) });
 
 export default defineConfig({
   testDir: './tests',

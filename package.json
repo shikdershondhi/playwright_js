@@ -17,19 +17,25 @@
     "test:allure:open": "allure open allure-results",
     "test:mail": "playwright test --report=mail",
     "test:mail:open": "playwright mail-reporter --report=mail",
-    "NPM:Install": "npm i"
+    "NPM:Install": "npm i",
+    "test:dev": "cross-env NODE_ENV=dev npx playwright test --headed",
+    "test:stage": "cross-env NODE_ENV=stage npx playwright test --headed",
+    "test:prod": "cross-env NODE_ENV=prod npx playwright test --headed"
   },
   "keywords": [],
-  "author": "",
+  "author": "shikder shondhi",
   "license": "ISC",
   "type": "commonjs",
   "devDependencies": {
-    "@playwright/test": "^1.51.1",
-    "@types/node": "^22.14.0"
+    "@playwright/test": "^1.52.0",
+    "@types/node": "^22.15.18",
+    "cross-env": "^7.0.3",
+    "dotenv": "^16.5.0",
+    "typescript": "^5.8.3"
   },
   "dependencies": {
-    "@faker-js/faker": "^9.7.0",
-    "@playwright/mcp": "^0.0.24",
+    "@faker-js/faker": "^9.8.0",
+    "@playwright/mcp": "^0.0.25",
     "allure-playwright": "^3.2.2",
     "playwright_js": "file:",
     "playwright-lighthouse": "^4.0.0",
