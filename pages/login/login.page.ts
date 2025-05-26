@@ -1,6 +1,6 @@
 import { Page, Locator } from '@playwright/test';
-import { BasePage } from './base.page';
-import * as testData from '../fixtures/testdata.json';
+import { BasePage } from '../base.page';
+import * as testData from '../../fixtures/testdata.json';
 // This class represents the login page of the application.
 // It contains methods to interact with the login form and perform login actions.
 

@@ -1,11 +1,11 @@
 import { test } from '@playwright/test';
-import { AdminPage } from '../../pages/admin.page';
-import * as testData from '../../fixtures/testdata.json';
+import { AdminPage } from '../../../pages/adminpanel/admin.page';
+import * as testData from '../../../fixtures/testdata.json';
 // Use test.describe to group related tests
 test.describe('Admin Flow', () => {
   test.beforeEach(async ({ page }) => {
     // Navigate to the home page before each test
-    await page.goto(testData.login.Homepage);
+    await page.goto(testData.url.Homepage);
   });
 
   test('Navigate from admin dashboard', async ({ page }) => {

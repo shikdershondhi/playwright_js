@@ -1,5 +1,5 @@
 import { test as setup } from '@playwright/test';
-import { LoginPage } from '../../pages/login.page';
+import { LoginPage } from '../../pages/login/login.page';
 
 setup('authenticate with valid user login with session', async ({ page }) => {
   const loginPage = new LoginPage(page);
@@ -9,6 +9,6 @@ setup('authenticate with valid user login with session', async ({ page }) => {
   await page.waitForURL(/worldmap/);
   // Save authenticated state to a file
   await page.context().storageState({ 
-    path: 'fixtures/auth/userAuthState.json' 
+    path: 'fixtures/auth/userAuthState.json'
   });
 });
