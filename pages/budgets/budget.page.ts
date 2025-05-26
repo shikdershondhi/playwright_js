@@ -1,10 +1,10 @@
 import { Page, Locator } from '@playwright/test';
-import { BasePage } from './basePage';
+import { BasePage } from '../base.page';
 
 
 export class BudgetPage extends BasePage {
-  readonly budgetMenuItem: Locator;
-  readonly dashboardLink: Locator;
+  // readonly budgetMenuItem: Locator;
+  // readonly dashboardLink: Locator;
   constructor(page: Page) {
     super(page);
    
