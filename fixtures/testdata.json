@@ -1,11 +1,12 @@
 {
-    "login": {
-      "username": "shikder",
-      "password": "Asdasd123@",
-      "url": "https://nsdev24.neustring.com/",
+  "url": {
+      "baseurl": "https://nsdev24.neustring.com/",
       "Homepage": "https://nsdev24.neustring.com/worldmap/"
     },
-    "deals": {
-      
+  "credentials": {  
+      "validUser": {
+      "username": "shikder",
+      "password": "Asdasd123@"
     }
   }
+}

@@ -1,11 +1,11 @@
 import { test } from '@playwright/test';
-import { BudgetPage } from '../../pages/budgetPage';
-import * as testData from '../../fixtures/testdata.json';
+import { BudgetPage } from '../../../pages/budgets/budget.page';
+import * as testData from '../../../fixtures/testdata.json';
 // Use test.describe to group related tests
 test.describe('Budget Flow', () => {
   test.beforeEach(async ({ page }) => {
     // Navigate to the home page before each test
-    await page.goto(testData.login.Homepage);
+    await page.goto(testData.url.Homepage);
   });
 
   test('Navigate from Budget dashboard', async ({ page }) => {
