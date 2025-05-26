@@ -33,6 +33,7 @@
     "allure-playwright": "^3.2.2",
     "playwright_js": "file:",
     "playwright-lighthouse": "^4.0.0",
-    "playwright-mail-reporter": "^0.0.8"
+    "playwright-mail-reporter": "^0.0.8",
+    "typescript": "^5.8.3"
   }
 }
