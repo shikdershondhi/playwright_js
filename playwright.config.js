@@ -22,9 +22,13 @@ export default defineConfig({
   /* Shared settings for all the projects below */
   use: {
     /* Collect trace when retrying the failed test */
+    baseURL: process.env.BASEURL,
+    ignoreHTTPSErrors: true,
+    headless: true,
     trace: 'on-first-retry',
     video: 'on',
     viewport: { width: 1920, height: 1080 },
+    actionTimeout: 5000,
   },
 
   /* Configure projects for major browsers */

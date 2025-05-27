@@ -1,7 +1,8 @@
-
 {
-  "validUser": {
-    "username": "Ehtesham_non_admin_user",
-    "password": "Asdasd123!"
+  "credentials": {  
+      "validUser": {
+      "username": "Ehtesham_non_admin_user",
+      "password": "Asdasd123!"
+    }
   }
 }

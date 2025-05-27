@@ -1,7 +1,8 @@
-
 {
-  "validUser": {
-    "username": "shikder",
-    "password": "Asdasd123@"
+  "credentials": {  
+      "validUser": {
+      "username": "shikder",
+      "password": "Asdasd123@"
+    }
   }
 }
