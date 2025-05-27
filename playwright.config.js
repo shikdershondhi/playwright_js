@@ -1,5 +1,10 @@
 // @ts-check
 import { defineConfig, devices } from '@playwright/test';
+import dotenv from 'dotenv';
+import path from 'path';
+
+const envFile = `.env.${process.env.NODE_ENV || 'dev'}`;
+dotenv.config({ path: path.resolve(__dirname, 'env', envFile) });
 
 export default defineConfig({
   testDir: './tests',
@@ -8,7 +13,7 @@ export default defineConfig({
   /* Fail the build on CI if you accidentally left test.only in the source code. */
   forbidOnly: !!process.env.CI,
   /* Retry on CI only */
-  retries: process.env.CI ? 2 : 0,
+  retries: process.env.CI ? 0 : 0,
   /* Opt out of parallel tests on CI. */
   workers: process.env.CI ? 1 : undefined,
   /* Reporter to use */
@@ -17,9 +22,13 @@ export default defineConfig({
   /* Shared settings for all the projects below */
   use: {
     /* Collect trace when retrying the failed test */
+    baseURL: process.env.BASEURL,
+    ignoreHTTPSErrors: true,
+    headless: true,
     trace: 'on-first-retry',
     video: 'on',
     viewport: { width: 1920, height: 1080 },
+    actionTimeout: 5000,
   },
 
   /* Configure projects for major browsers */
