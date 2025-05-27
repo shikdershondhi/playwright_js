@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { AdminPage } from '../../../pages/adminpanel/admin.page';
+import { AppPages } from '../../../pages/index';
 import {HOME_URL} from "../../../utils/env";
 // Use test.describe to group related tests
 test.describe('Admin Flow', () => {
@@ -9,10 +9,10 @@ test.describe('Admin Flow', () => {
   });
 
   test.skip('Navigate from admin dashboard', async ({ page }) => {
-    const adminPage = new AdminPage(page);
-    await adminPage.navigateToAdminDashboard();
-    await adminPage.searchAndSelectUser();
-    await adminPage.selectUserPermission();
+    const app = new AppPages(page);
+    await app.adminPage.navigateToAdminDashboard();
+    await app.adminPage.searchAndSelectUser();
+    await app.adminPage.selectUserPermission();
     await page.pause(); // Wait for 5 seconds to ensure the page is loaded
     await page.screenshot({ path: 'downloads/screenshot/screenshot.png' }); // Take a screenshot
   });
