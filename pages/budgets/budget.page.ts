@@ -1,5 +1,6 @@
 import { Page, Locator } from '@playwright/test';
 import { BasePage } from '../base.page';
+import {BASE_URL} from "../../utils/env";
 
 
 export class BudgetPage extends BasePage {
@@ -12,7 +13,7 @@ export class BudgetPage extends BasePage {
   }
 
   async navigateToBudgetDashboard() {
-    await this.page.goto('https://nsdev24.neustring.com/budget/dashboard/');
+    await this.page.goto(`${BASE_URL}`+'/budget/dashboard/');
     await this.waitForLoadState();
   }
 }
