@@ -1,5 +1,5 @@
 import { test } from '@playwright/test';
-import { BudgetPage } from '../../../pages/budgets/budget.page';
+import { AppPages } from '../../../pages/index';
 import { HOME_URL} from "../../../utils/env";
 // Use test.describe to group related tests
 test.describe('Budget Flow', () => {
@@ -9,7 +9,7 @@ test.describe('Budget Flow', () => {
   });
 
   test('Navigate from Budget dashboard', async ({ page }) => {
-    const budgetPage = new BudgetPage(page);
-    await budgetPage.navigateToBudgetDashboard();
+    const app = new AppPages(page);
+    await app.budgetPage.navigateToBudgetDashboard();
   });
 });

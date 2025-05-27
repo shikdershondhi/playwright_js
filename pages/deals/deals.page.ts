@@ -45,7 +45,7 @@ export class DealsPage extends BasePage {
     await this.RoamingPartner.click();
     await this.selectOperators.click();
     await this.Click_To_Select.click();
-    await this.Select_RoamSmart.click();
+    await this.Select_RoamSmart.click({force: true});
     await this.Confirm.click({force: true});
     await this.Save.click();
     await this.page.waitForTimeout(2000);
