@@ -1,6 +1,6 @@
 import { Page, Locator } from '@playwright/test';
 import { BasePage } from '../base.page';
-
+// example of a module
 export class DealsPage extends BasePage {
   readonly dealsMenuItem: Locator;
   readonly repositorySubmenu: Locator;

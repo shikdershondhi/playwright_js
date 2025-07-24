@@ -1,12 +1,12 @@
 {
   "url": {
-      "baseurl": "https://nsdev24.neustring.com/",
-      "Homepage": "https://nsdev24.neustring.com/worldmap/"
+      "baseurl": "https://yourprojectloginpagedev.com/",
+      "Homepage": "https://yourprojecthomepagedev/homepage/"
     },
   "credentials": {  
       "validUser": {
-      "username": "shikder",
-      "password": "Asdasd123@"
+        "username": "username",
+        "password": "password"
     }
   }
 }
