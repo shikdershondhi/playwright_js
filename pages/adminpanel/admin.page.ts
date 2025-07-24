@@ -1,7 +1,7 @@
 import { Page, Locator } from '@playwright/test';
 import { BasePage } from '../base.page';
 
-
+// Example of admin page to be automated. put your admin page codes here.
 export class AdminPage extends BasePage {
    readonly adminButton: Locator;
    readonly userLink: Locator;

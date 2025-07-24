@@ -2,6 +2,7 @@ import { Page, Locator } from '@playwright/test';
 import { BasePage } from '../base.page';
 import {BASE_URL} from "../../utils/env";
 
+// example of a module
 
 export class BudgetPage extends BasePage {
   // readonly budgetMenuItem: Locator;
