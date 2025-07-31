@@ -1,3 +1,45 @@
+# file
+
+├── .github
+    └── workflows
+    │   └── playwright.yml
+├── .gitignore
+├── README.md
+├── env
+    ├── .env.dev
+    ├── .env.prod
+    └── .env.stage
+├── fixtures
+    ├── dev.json
+    ├── prod.json
+    └── stage.json
+├── package-lock.json
+├── package.json
+├── pages
+    ├── adminpanel
+    │   └── admin.page.ts
+    ├── base.page.ts
+    ├── budgets
+    │   └── budget.page.ts
+    ├── deals
+    │   └── deals.page.ts
+    ├── index.ts
+    └── login
+    │   └── login.page.ts
+├── playwright.config.js
+├── tests
+    ├── e2e
+    │   ├── adminpanel
+    │   │   └── adminUserFlow.spec.ts
+    │   └── deals
+    │   │   ├── budgetFlow.spec.ts
+    │   │   ├── createNewDeal.spec.ts
+    │   │   └── dealsFlow.spec.ts
+    └── setup
+    │   └── auth.setup.ts
+├── tsconfig.json
+└── utils
+    └── env.ts
 
 # 🎭 Playwright
 
